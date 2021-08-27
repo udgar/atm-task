@@ -6,11 +6,12 @@ import java.util.List;
 
 public class BankTotal {
 
-    public BigDecimal totalAmount;
+    private BigDecimal totalAmount;
+    private List<Banknote> notes;
 
     public BankTotal() {
 
-        List<Banknote> notes = new ArrayList<>();
+        notes = new ArrayList<>();
         totalAmount = new BigDecimal("0.0");
         for (int i = 0;
                 i < 10; i++) {
@@ -35,7 +36,6 @@ public class BankTotal {
     }
 
     public BigDecimal getTotalAmount() {
-
         return totalAmount;
     }
 }

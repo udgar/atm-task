@@ -26,8 +26,8 @@ public class ATMImp implements ATM {
 
     @Override
     public List<Banknote> withdraw(String accountNumber, BigDecimal amount) {
-        new MultipleOfFiveVerification(amount);
-        new AccountVerification(accountNumber);
+        MultipleOfFiveVerification.multipleOfFiveVerification(amount);
+        AccountVerification.accountVerification(accountNumber);
         new BalanceVerification(accountNumber, amount);
         new AtmVerification(accountNumber, amount, totalAmount);
         List<Banknote> notes = list.returnNote(amount);
